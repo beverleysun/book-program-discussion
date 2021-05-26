@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "watch": "concurrently \"npm:watch-*\"",
+    "build": "concurrently \"npm:build-*\"",
+    "watch-ts": "chokidar index.ts --command \"npm run build-ts\"",
+    "build-ts": "tsc --target ESNext index.ts",
+    "watch-scss": "chokidar styles.scss --command \"npm run build-scss\"",
+    "build-scss": "sass styles.scss | postcss --use autoprefixer > styles.css\"",
+    "serve": "light-server -o -q -s . -w \"index.html\" -w \"styles.scss # npm run build-scss # reloadcss\" -w \"index.ts # npm run build-ts\""
+  },
+  "dependencies": {
+    "autoprefixer": "latest",
+    "chokidar-cli": "latest",
+    "concurrently": "latest",
+    "light-server": "latest",
+    "node-sass": "^6.0.0",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "sass": "latest",
+    "typescript": "latest"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "not dead"
+  ]
+}
