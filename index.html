@@ -7,22 +7,20 @@
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="home custom-background-color">
       <div class="header">
-        <a rel="home" href="">
-          <img src="logo.svg" alt="logo" class="logo" />
-        </a>
+        <img src="logo.svg" alt="logo" class="logo" />
         <nav class="nav-bar">
-          <a href="">Home</a>
-          <a href="">About Us</a>
-          <a href="">Catalogue</a>
-          <a href="">News</a>
+          <div class="link">Home</div>
+          <div class="link">About Us</div>
+          <div class="link">Catalogue</div>
+          <div class="link">News</div>
         </nav>
         <nav class="user-actions">
           <a href="">Log In</a>
@@ -32,9 +30,7 @@
       <div class="content">
         <div class="left">
           <h1>Join a book club near you.</h1>
-          <a href=""
-            ><div class="sign-up"><strong>Sign Up!</strong></div></a
-          >
+          <a href=""><div class="sign-up">Sign Up!</div></a>
         </div>
         <div class="right">
           <img
@@ -46,7 +42,41 @@
         </div>
       </div>
     </div>
-    <div class="catalogue"></div>
+    <div class="catalogue">
+      <h2>Check out our catalogue</h2>
+      <div class="books">
+        <div class="book">
+          <img src="./cover-1984.jpg" alt="1984 by George Orwell book cover" />
+          <div class="title">1984</div>
+          <div class="author"><em>George Orwell</em></div>
+        </div>
+        <div class="book">
+          <img
+            src="./cover-great-gatsby.jpg"
+            alt="The Great Gatsby by F. Scott Fitzgerald book cover"
+          />
+          <div class="title">The Great Gatsby</div>
+          <div class="author"><em>F. Scott Fitzgerald</em></div>
+        </div>
+        <div class="book">
+          <img
+            src="./cover-huckleberry.jpg"
+            alt="Huckleberry Finn by Mark Twain book cover"
+          />
+          <div class="title">Huckleberry Finn</div>
+          <div class="author"><em>Mark Twain</em></div>
+        </div>
+        <div class="book">
+          <img
+            src="./cover-little-women.jpg"
+            alt="Little Women by Louisa May Alcott book cover"
+          />
+          <div class="title">Little Women</div>
+          <div class="author"><em>Louisa May Alcott</em></div>
+        </div>
+      </div>
+      <div class="more-books-btn">More Books</div>
+    </div>
     <div class="news custom-background-color"></div>
     <div class="footer"></div>
     <script src="./index.js"></script>
