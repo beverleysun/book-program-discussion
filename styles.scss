@@ -1,5 +1,6 @@
 $primary-color: #6f4f28;
 $secondary-color: #ffbf09;
+$box-shadow: 5px 5px 15px rgba(0, 0, 0, 40%);
 
 * {
   margin: 0;
@@ -20,6 +21,46 @@ body {
 
 .link {
   cursor: pointer;
+}
+
+.btn-hover {
+  transition: ease-out 0.3s;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    transform: scale(1.05) rotate(-3deg);
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  background-color: $secondary-color;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: $box-shadow;
+  bottom: 43px;
+  right: 70px;
+  z-index: 97;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px 0 5px;
+  display: none;
+  transition: ease-out 0.3s;
+
+  .arrow {
+    height: 25px;
+    width: 25px;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-top-left-radius: 3px;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .overlay {
@@ -73,7 +114,7 @@ body {
       border-radius: 15px;
       height: 25px;
       outline: none;
-      padding-left: 15px;
+      padding: 0 15px;
 
       &:focus {
         box-shadow: 0 0 3px $primary-color;
@@ -298,7 +339,7 @@ body {
 
       img {
         width: 15vw;
-        box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 40%);
+        box-shadow: $box-shadow;
         margin-bottom: 10px;
         transition: ease-out 0.3s;
       }
@@ -308,11 +349,12 @@ body {
       }
 
       .title {
+        font-size: 1.1rem;
         font-weight: 600;
       }
 
       .author {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         font-weight: 300;
       }
     }
@@ -369,6 +411,7 @@ body {
     background-color: white;
     width: calc(60vw + 150px);
     border-radius: 50px;
+    box-shadow: $box-shadow;
 
     .container {
       padding: 50px;
