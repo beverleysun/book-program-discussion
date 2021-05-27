@@ -13,6 +13,68 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="overlay"></div>
+    <div id="bookclubrego" class="reg-container">
+      <form class="reg-form">
+        <div class="header">
+          <div class="title">Sign up to Book Program Discussion</div>
+          <div id="close-form" class="link">x</div>
+        </div>
+        <div class="divider custom-background-color"></div>
+        <div id="userDetails">
+          <div class="subtitle">Details</div>
+          <div class="group-container">
+            <div class="group">
+              <label for="first-name" class="required">First Name</label>
+              <input id="first-name" name="firstName" type="text" required />
+            </div>
+            <div class="group">
+              <label for="last-name" class="required">Last Name</label>
+              <input id="last-name" name="lastName" type="text" required />
+            </div>
+          </div>
+          <div class="group-container">
+            <div class="group">
+              <label for="username" class="required">Username</label>
+              <input id="username" name="username" type="text" required />
+            </div>
+            <div class="group">
+              <label for="password" class="required">Password</label>
+              <input id="password" name="password" type="password" required />
+            </div>
+          </div>
+        </div>
+        <div id="addresses">
+          <div class="subtitle">Address</div>
+          <div class="group-container">
+            <div class="group">
+              <label for="home-address">Home Address</label>
+              <input id="home-address" name="homeAddress" type="text" />
+            </div>
+            <div class="group">
+              <label for="work-address">Work Address</label>
+              <input id="work-address" name="workAddress" type="text" />
+            </div>
+          </div>
+        </div>
+        <div id="contacts">
+          <div class="subtitle">Contact</div>
+          <div class="group-container">
+            <div class="group">
+              <label for="phone">Mobile Number</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+            <div class="group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" />
+            </div>
+          </div>
+        </div>
+        <div class="submit-container">
+          <input class="submit-btn" type="submit" />
+        </div>
+      </form>
+    </div>
     <div class="home custom-background-color">
       <div class="header">
         <img src="logo.svg" alt="logo" class="link logo" />
@@ -24,13 +86,13 @@
         </nav>
         <nav class="user-actions">
           <div class="link">Log In</div>
-          <div class="link sign-up">Sign Up</div>
+          <div class="link sign-up" id="trigger-modal">Sign Up</div>
         </nav>
       </div>
       <div class="content">
         <div class="left">
           <h1 class="title">Join a book club near you.</h1>
-          <div class="link sign-up">Sign Up!</div>
+          <div class="link sign-up" id="trigger-modal">Sign Up!</div>
         </div>
         <div class="right">
           <img

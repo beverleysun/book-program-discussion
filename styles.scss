@@ -22,6 +22,102 @@ body {
   cursor: pointer;
 }
 
+.overlay {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 60%);
+  z-index: 98;
+  position: fixed;
+}
+
+.reg-container {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+  border-radius: 50px;
+  width: 50vw;
+  max-width: 700px;
+  min-width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .reg-form {
+    padding: 50px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+
+      .title {
+        font-weight: 500;
+      }
+
+      .exit {
+        font-weight: 300;
+      }
+    }
+
+    .subtitle {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    input {
+      border: 1px solid $primary-color;
+      border-radius: 15px;
+      height: 25px;
+      outline: none;
+      padding-left: 15px;
+    }
+    .divider {
+      height: 1px;
+      width: 100%;
+    }
+
+    #userDetails,
+    #addresses,
+    #contacts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contacts {
+      margin-bottom: 20px;
+    }
+
+    .group-container {
+      display: flex;
+      margin-bottom: 10px;
+      .group {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        &:first-of-type {
+          margin-right: 20px;
+        }
+      }
+    }
+    .submit-container {
+      display: flex;
+      justify-content: flex-end;
+      .submit-btn {
+        padding: 0 15px;
+        cursor: pointer;
+        background-color: $secondary-color;
+        border: none;
+        height: 35px;
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
 .home {
   height: 100vh;
   width: 100%;
