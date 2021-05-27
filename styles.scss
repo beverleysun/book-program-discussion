@@ -74,6 +74,10 @@ body {
       height: 25px;
       outline: none;
       padding-left: 15px;
+
+      &:focus {
+        box-shadow: 0 0 3px $primary-color;
+      }
     }
     .divider {
       height: 1px;
@@ -107,12 +111,13 @@ body {
       display: flex;
       justify-content: flex-end;
       .submit-btn {
-        padding: 0 15px;
+        padding: 0 23px;
         cursor: pointer;
         background-color: $secondary-color;
         border: none;
-        height: 35px;
-        border-radius: 25px;
+        height: 40px;
+        border-radius: 30px;
+        font-size: 1.2rem;
       }
     }
   }
