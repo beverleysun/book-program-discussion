@@ -4,7 +4,7 @@
     "watch": "concurrently \"npm:watch-*\"",
     "build": "concurrently \"npm:build-*\"",
     "watch-scss": "chokidar styles.scss --command \"npm run build-scss\"",
-    "build-scss": "sass styles.scss | postcss --use autoprefixer > styles.css\"",
+    "build-scss": "sass styles.scss | postcss --use autoprefixer > styles.css",
     "serve": "light-server -o -q -s . -w \"index.html\" -w \"styles.scss # npm run build-scss # reloadcss\" -w \"index.ts # npm run build-ts\""
   },
   "dependencies": {
