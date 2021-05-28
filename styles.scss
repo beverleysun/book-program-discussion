@@ -436,6 +436,10 @@ body {
 
           .body {
             font-weight: 300;
+
+            @media only screen and (max-width: 1000px) {
+              font-size: 0.9rem;
+            }
           }
         }
 
@@ -450,6 +454,9 @@ body {
             font-size: 1.3rem;
             display: inline-block;
             font-weight: 500;
+            @media only screen and (max-width: 1000px) {
+              font-size: 0.9rem;
+            }
           }
         }
       }
