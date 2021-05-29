@@ -2,6 +2,11 @@ document
   .querySelectorAll("#trigger-modal")
   .forEach((btn) => btn.addEventListener("click", showForm));
 document.querySelector("#close-form").addEventListener("click", hideForm);
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    hideForm();
+  }
+});
 document.querySelector(".overlay").addEventListener("click", hideForm);
 document.querySelector(".back-to-top").addEventListener("click", scrollToTop);
 document
