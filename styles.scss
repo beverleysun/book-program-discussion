@@ -19,6 +19,13 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+}
+
 .link {
   cursor: pointer;
 }
@@ -106,18 +113,6 @@ body {
       margin-top: 10px;
     }
 
-    input {
-      border: 1px solid $primary-color;
-      border-radius: 15px;
-      height: 25px;
-      outline: none;
-      padding: 0 15px;
-
-      &:focus {
-        box-shadow: 0 0 3px $primary-color;
-      }
-    }
-
     .divider {
       height: 1px;
       width: 100%;
@@ -141,6 +136,21 @@ body {
         display: flex;
         flex-direction: column;
         width: 50%;
+        .red {
+          color: red;
+        }
+        input {
+          border: 1px solid $primary-color;
+          border-radius: 15px;
+          height: 25px;
+          outline: none;
+          padding: 0 15px;
+
+          &:focus {
+            box-shadow: 0 0 3px $primary-color;
+          }
+        }
+
         &:first-of-type {
           margin-right: 20px;
         }
@@ -197,30 +207,34 @@ body {
       display: flex;
       flex-wrap: nowrap;
 
-      .link {
-        color: white;
+      a {
         margin-right: 50px;
-        position: relative;
-        white-space: nowrap;
 
         &:last-of-type {
           margin-right: 0;
         }
 
-        &::after {
-          content: "";
-          width: 0;
-          position: absolute;
-          height: 2px;
-          left: 0;
-          background-color: white;
-          display: block;
-          transform-origin: left center;
-          transition: ease-out 0.2s;
-        }
+        .link {
+          color: white;
 
-        &:hover::after {
-          width: 100%;
+          position: relative;
+          white-space: nowrap;
+
+          &::after {
+            content: "";
+            width: 0;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            background-color: white;
+            display: block;
+            transform-origin: left center;
+            transition: ease-out 0.2s;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
         }
       }
     }
@@ -230,7 +244,7 @@ body {
       align-items: center;
       margin-bottom: -6px;
 
-      .link {
+      a {
         position: relative;
         white-space: nowrap;
 
@@ -483,9 +497,11 @@ body {
 
     .social-media {
       display: flex;
-      img {
-        height: 22px;
+      a {
         margin-right: 20px;
+        img {
+          height: 22px;
+        }
         &:last-of-type {
           margin-right: 0;
         }
@@ -494,32 +510,36 @@ body {
 
     .links {
       display: flex;
-      .link {
+
+      a {
         margin-right: 50px;
         position: relative;
-        white-space: nowrap;
-        &:last-of-type {
-          margin-right: 0;
-        }
 
         &:last-of-type {
           margin-right: 0;
         }
 
-        &::after {
-          content: "";
-          width: 0;
-          position: absolute;
-          height: 2px;
-          left: 0;
-          background-color: black;
-          display: block;
-          transform-origin: left center;
-          transition: ease-out 0.2s;
-        }
+        .link {
+          white-space: nowrap;
+          &:last-of-type {
+            margin-right: 0;
+          }
 
-        &:hover::after {
-          width: 100%;
+          &::after {
+            content: "";
+            width: 0;
+            position: absolute;
+            height: 2px;
+            left: 0;
+            background-color: black;
+            display: block;
+            transform-origin: left center;
+            transition: ease-out 0.2s;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
         }
       }
     }

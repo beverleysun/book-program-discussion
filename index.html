@@ -13,22 +13,21 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="back-to-top link">
-      <div class="arrow"></div>
-    </div>
     <div class="overlay"></div>
     <div id="bookclubrego" class="reg-container">
       <form class="reg-form">
         <div class="header">
           <div class="title">Sign up to Book Program Discussion</div>
-          <div id="close-form" class="link">x</div>
+          <a href="#"><div id="close-form" class="link">x</div></a>
         </div>
         <div class="divider custom-background-color"></div>
         <div id="userDetails">
           <div class="subtitle">Details</div>
           <div class="group-container">
             <div class="group">
-              <label for="first-name" class="required">First Name</label>
+              <label for="first-name" class="required" id="first-name-field"
+                >First Name<span class="red">*</span></label
+              >
               <input
                 class="custom-color"
                 id="first-name"
@@ -38,7 +37,9 @@
               />
             </div>
             <div class="group">
-              <label for="last-name" class="required">Last Name</label>
+              <label for="last-name" class="required"
+                >Last Name<span class="red">*</span></label
+              >
               <input
                 class="custom-color"
                 id="last-name"
@@ -50,7 +51,9 @@
           </div>
           <div class="group-container">
             <div class="group">
-              <label for="username" class="required">Username</label>
+              <label for="username" class="required"
+                >Username<span class="red">*</span></label
+              >
               <input
                 class="custom-color"
                 id="username"
@@ -60,7 +63,9 @@
               />
             </div>
             <div class="group">
-              <label for="password" class="required">Password</label>
+              <label for="password" class="required"
+                >Password<span class="red">*</span></label
+              >
               <input
                 class="custom-color"
                 id="password"
@@ -75,12 +80,15 @@
           <div class="subtitle">Address</div>
           <div class="group-container">
             <div class="group">
-              <label for="home-address">Home Address</label>
+              <label for="home-address" class="required"
+                >Home Address<span class="red">*</span></label
+              >
               <input
                 class="custom-color"
                 id="home-address"
                 name="homeAddress"
                 type="text"
+                required
               />
             </div>
             <div class="group">
@@ -98,16 +106,27 @@
           <div class="subtitle">Contact</div>
           <div class="group-container">
             <div class="group">
-              <label for="phone">Mobile Number</label>
-              <input class="custom-color" id="phone" name="phone" type="tel" />
+              <label for="phone" class="required"
+                >Mobile Number<span class="red">*</span></label
+              >
+              <input
+                class="custom-color"
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+              />
             </div>
             <div class="group">
-              <label for="email">Email</label>
+              <label for="email" class="required"
+                >Email<span class="red">*</span></label
+              >
               <input
                 class="custom-color"
                 id="email"
                 name="email"
                 type="email"
+                required
               />
             </div>
           </div>
@@ -119,22 +138,26 @@
     </div>
     <div class="home custom-background-color">
       <div class="header">
-        <img src="logo.svg" alt="logo" class="link logo" />
+        <a href="#"><img src="logo.svg" alt="logo" class="link logo" /></a>
         <nav class="nav-bar">
-          <div class="link">Home</div>
-          <div class="link">About Us</div>
-          <div class="link">Catalogue</div>
-          <div class="link">News</div>
+          <a href="#"><div class="link">Home</div></a>
+          <a href="#"><div class="link">About Us</div></a>
+          <a href="#"><div class="link">Catalogue</div></a>
+          <a href="#"><div class="link">News</div></a>
         </nav>
         <nav class="user-actions">
-          <div class="link">Log In</div>
-          <div class="link sign-up btn-hover" id="trigger-modal">Sign Up</div>
+          <a href="#"><div class="link">Log In</div></a>
+          <a href="#" id="trigger-modal"
+            ><div class="link sign-up btn-hover">Sign Up</div></a
+          >
         </nav>
       </div>
       <div class="content">
         <div class="left">
           <h1 class="title">Join a book club near you.</h1>
-          <div class="link sign-up btn-hover" id="trigger-modal">Sign Up!</div>
+          <a href="#" id="trigger-modal"
+            ><div class="link sign-up btn-hover">Sign Up!</div></a
+          >
         </div>
         <div class="right">
           <img
@@ -150,36 +173,49 @@
       <h2>Check out our catalogue</h2>
       <div class="books">
         <div class="link book">
-          <img src="./cover-1984.jpg" alt="1984 by George Orwell book cover" />
-          <div class="title">1984</div>
-          <div class="author"><em>George Orwell</em></div>
+          <a href="#">
+            <img
+              src="./cover-1984.jpg"
+              alt="1984 by George Orwell book cover"
+            />
+            <div class="title">1984</div>
+            <div class="author"><em>George Orwell</em></div></a
+          >
         </div>
         <div class="link book">
-          <img
-            src="./cover-great-gatsby.jpg"
-            alt="The Great Gatsby by F. Scott Fitzgerald book cover"
-          />
-          <div class="title">The Great Gatsby</div>
-          <div class="author"><em>F. Scott Fitzgerald</em></div>
+          <a href="#">
+            <img
+              src="./cover-great-gatsby.jpg"
+              alt="The Great Gatsby by F. Scott Fitzgerald book cover"
+            />
+            <div class="title">The Great Gatsby</div>
+            <div class="author"><em>F. Scott Fitzgerald</em></div></a
+          >
         </div>
         <div class="link book">
-          <img
-            src="./cover-huckleberry.jpg"
-            alt="Huckleberry Finn by Mark Twain book cover"
-          />
-          <div class="title">Huckleberry Finn</div>
-          <div class="author"><em>Mark Twain</em></div>
+          <a href="#">
+            <img
+              src="./cover-huckleberry.jpg"
+              alt="Huckleberry Finn by Mark Twain book cover"
+            />
+            <div class="title">Huckleberry Finn</div>
+            <div class="author"><em>Mark Twain</em></div></a
+          >
         </div>
         <div class="link book">
-          <img
-            src="./cover-little-women.jpg"
-            alt="Little Women by Louisa May Alcott book cover"
-          />
-          <div class="title">Little Women</div>
-          <div class="author"><em>Louisa May Alcott</em></div>
+          <a href="#">
+            <img
+              src="./cover-little-women.jpg"
+              alt="Little Women by Louisa May Alcott book cover"
+            />
+            <div class="title">Little Women</div>
+            <div class="author"><em>Louisa May Alcott</em></div></a
+          >
         </div>
       </div>
-      <div class="link more-books-btn btn-hover">More Books</div>
+      <a href="#"
+        ><div class="link more-books-btn btn-hover">More Books</div></a
+      >
     </div>
     <div class="news custom-background-color">
       <h2>Latest News</h2>
@@ -199,7 +235,9 @@
               </div>
             </div>
             <div class="btn-container">
-              <div class="link read-more-btn btn-hover">Read More</div>
+              <a href="#"
+                ><div class="link read-more-btn btn-hover">Read More</div></a
+              >
             </div>
           </div>
         </div>
@@ -208,18 +246,28 @@
     <div class="footer">
       <div class="container">
         <div class="links">
-          <div class="link">Terms & Conditions</div>
-          <div class="link">Privacy Policy</div>
-          <div class="link">Contact Us</div>
-          <div class="link">Site Map</div>
+          <a href="#"><div class="link">Terms & Conditions</div></a>
+          <a href="#"><div class="link">Privacy Policy</div></a>
+          <a href="#"><div class="link">Contact Us</div></a>
+          <a href="#"><div class="link">Site Map</div></a>
         </div>
         <div class="social-media">
-          <img src="./facebook.svg" alt="Facebook icon link" class="link" />
-          <img src="./instagram.svg" alt="Instagram icon link" class="link" />
-          <img src="./twitter.svg" alt="Twitter icon link" class="link" />
+          <a href="#"
+            ><img src="./facebook.svg" alt="Facebook icon link" class="link"
+          /></a>
+          <a href="#"
+            ><img src="./instagram.svg" alt="Instagram icon link" class="link"
+          /></a>
+          <a href="#"
+            ><img src="./twitter.svg" alt="Twitter icon link" class="link"
+          /></a>
         </div>
       </div>
     </div>
+    <a href="#"
+      ><div class="back-to-top link">
+        <div class="arrow"></div></div
+    ></a>
     <script src="./index.js"></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 document
+  .querySelectorAll("a")
+  .forEach((link) => link.addEventListener("click", doNothing));
+document
   .querySelectorAll("#trigger-modal")
   .forEach((btn) => btn.addEventListener("click", showForm));
 document.querySelector("#close-form").addEventListener("click", hideForm);
@@ -18,6 +21,10 @@ window.addEventListener("keydown", (e) => {
 });
 onScroll();
 
+function doNothing(e) {
+  e.preventDefault();
+}
+
 function toTopButtonBigger() {
   let button = document.querySelector(".back-to-top");
   button.style.transition = "ease-out 0.3s";
@@ -34,9 +41,11 @@ function toTopButtonSmaller() {
 function showForm() {
   let overlay = document.querySelector(".overlay");
   let form = document.querySelector("#bookclubrego");
+  let nameField = document.querySelector("#first-name-field");
 
   overlay.style.display = "block";
   form.style.display = "block";
+  nameField.focus();
 }
 
 function hideForm() {
